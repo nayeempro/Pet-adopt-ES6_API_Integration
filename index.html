@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment-06</title>
+    <!-- Daisy UI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .active-border{
+         border: 2px dashed green; 
+        /* background-color: rgb(108, 105, 105); */
+        /* color: white; */
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="w-10/12 mx-auto">
+            <div class="navbar bg-base-100 flex justify-between">
+                <div class="">
+                  <img src="./images/logo.webp" alt="">
+                  <p class="text-3xl font-extrabold ml-2">Peddy</p>
+                </div>
+                <div class=" ">
+                  <ul class="flex gap-8 px-1 text-xl font-semibold opacity-60">
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Contact</li>
+                  </ul>
+                </div>
+                <div class="">
+                    <img class="w-8 h-8 object-cover" src="https://img.icons8.com/?size=100&id=15263&format=png&color=000000" alt="">
+                </div>
+              </div>
+        </nav>
+        
+    </header>
+    <main>
+        <section class="w-7/12 mx-auto flex flex-col justify-center items-center text-center gap-4 mt-10">
+            <h4 class="text-xl text-gray-600 font-semibold">Bringing Families Together ❤️‍🔥 </h4>
+            <h1 class="w-6/12 text-4xl font-extrabold">Your Path to Adoption Starts Here</h1>
+            <p class="w-11/12 text-lg font-normal">Discover your perfect companion among our adorable pets! Whether you're looking for a playful pup, a cuddly cat, or a gentle rabbit, we have the perfect pet waiting for you. Explore, connect, and take the first step towards bringing joy into your home. Start your journey today!</p>
+            <button onclick="location.href='#adopt-main-section'" class="btn bg-[#0E7A81] rounded-lg text-white">View More</button>
+            <img class="w-9/12 h-full object-cover" src="./images/pet.webp" alt="">
+        </section>
+        <!-- adopt section -->
+        <section id="adopt-main-section">
+
+          <!-- adopt section text-->
+            <section class="w-8/12 mx-auto flex flex-col justify-center items-center text-center gap-4 mt-10">
+            <h2 class="text-2xl font-bold">Adopt  Your  Best Friend</h2>
+            <p class="w-10/12 text-lg font-normal">Find your perfect companion! Explore our wide selection of lovable pets waiting to become your best friend. Adopt today and bring home a lifetime of joy, loyalty, and love!.</p>
+            </section>
+            <!-- adopt section categories-->
+            <section id="categories" class="w-10/12 mx-auto flex justify-between my-5">
+            </section>
+            <!-- picture section -->
+            <section class="w-10/12 mx-auto">
+              
+                      <div class="flex justify-between my-4">
+                        <h4 class="text-xl font-extrabold">Best Deal For You</h4>
+                        <button onclick="sortByPrice()" id="sortBtn" class="btn bg-[#0E7A81] text-white text-xl font-bold">Sort by Price</button>
+                      </div>
+                      <div id="spin" class="hidden flex justify-center">
+                        <!-- loading spin -->
+                        <span class="loading loading-bars loading-lg"></span>
+                      </div>
+                      <div class="flex gap-2 mb-4">
+                        <div id="petcontainer" class="w-3/4 mx-auto rounded-xl grid grid-cols-1 lg:grid-cols-3 gap-4">
+                        </div>
+                        <div id="pokeimage" class="w-1/4  mx-auto grid grid-cols-2 auto-rows-min p-2 gap-1 border-2 border-gray-600 rounded-xl"></div>
+                      </div>
+                    
+              
+                      <!-- Open the modal using for Adopt-->
+
+                          <!-- Modal -->
+                          <dialog id="openModalAdopt" class="hidden modal modal-bottom sm:modal-middle">
+                            <div class="modal-box">
+                              <div id="modaltextAdopt"></div>
+                            </div>
+                          </dialog>
+
+                      <!-- Open the modal using for Details-->
+                      
+                      <dialog id="openModal" class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box">
+                          <div id="modaltext"></div>
+                          <div class="">
+                            <form method="dialog">
+                              <!-- if there is a button in form, it will close the modal -->
+                              <button class="btn w-full text-[#0E7A81]">Cancel</button>
+                            </form>
+                          </div>
+                        </div>
+                      </dialog>
+                      <!-- countdown-->
+
+                    
+                      
+                      
+                      
+            </section>
+         </section>
+         
+        
+          
+        
+
+
+    </main>
+    <footer class="footer bg-black text-neutral-content p-20">
+    
+        <nav >
+          <div class="footer-title">
+            <div class="navbar">
+                <div class="navbar-start">
+                  <img src="./images/logo.webp" alt="">
+                  <p class="text-2xl font-extrabold ml-2">Peddy</p>
+                </div>
+            </div>
+          <a class="text-base font-normal">Location: av. Washington 165, NY CA 54003 <br>
+            Phone: +31 85 964 47 25 <br>
+            Email: info@yourdomain.com <br>
+            Openings hours: 9.00 AM - 5.00 PM</a> <br>
+            <div class="flex w-8 h-8 rounded-lg object-cover gap-10 mt-5">
+                <img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="">
+                <img src="https://img.icons8.com/?size=100&id=qLVB1tIe9Ts9&format=png&color=000000" alt="">
+                <img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="">
+            </div>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Useful Links</h6>
+          <a class="link link-hover">Home</a>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Animals</a>
+          <a class="link link-hover">Foundation</a>
+          <a class="link link-hover">Contact</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Drop a Massage</h6>
+          <input type="text" placeholder="Enter Your Email " class="input input-bordered w-full max-w-xs bg-none" />
+          <button class="btn w-full bg-[#0E7A81] text-white border-none">Subscribe</button>
+        </nav>
+    
+      </footer>
+ 
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
